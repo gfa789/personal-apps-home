@@ -31,7 +31,6 @@ pathlib.Path('/etc/ssh/sshd_config.d/40-deploy-trigger.conf').write_text('''Matc
     KbdInteractiveAuthentication no
     PermitTTY no
     DisableForwarding yes
-    PermitUserEnvironment no
 Match all
 ''')
 # AuthorizedKeysFile must be readable by sshd after dropping to the account.
