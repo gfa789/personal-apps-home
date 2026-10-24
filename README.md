@@ -26,3 +26,5 @@ Routing:
 - `/chess` -> Rookcursion owner bridge 8891 -> app 8890
 
 Services start on boot; public application ports remain blocked. The entire setup runs on the existing Hetzner host.
+
+GitHub OIDC subjects include immutable owner/repository IDs for these repositories. Match the exact issued subject (`repo:OWNER@OWNER_ID/REPO@REPO_ID:ref:refs/heads/main`), not the legacy name-only format. The three configured repository IDs are 1432377309 (fivek), 1432376079 (rookcursion), and 1432472520 (personal-apps-home), owned by account ID 98461385.
