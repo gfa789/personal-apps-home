@@ -1,0 +1,17 @@
+[Unit]
+Description=Private personal app homepage
+After=network.target
+
+[Service]
+User=personal-apps-home
+WorkingDirectory=/opt/personal-apps-home/app
+EnvironmentFile=/etc/personal-apps-home/app.env
+ExecStart=/usr/bin/python3 server.py
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
